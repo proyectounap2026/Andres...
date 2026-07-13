@@ -332,7 +332,7 @@
             <p style="font-size: 0.95em; color: #999;">Es tu nombre</p>
             
             <div class="form-group">
-                <input type="password" id="passwordInput" placeholder="Ingresa la contraseña">
+                <input type="text" id="passwordInput" placeholder="Ingresa la contraseña">
             </div>
             
             <button onclick="validatePassword()">Continuar</button>
@@ -344,7 +344,7 @@
             <h2>¡Hola Andres! 👋</h2>
             
             <div class="info-box">
-                <p>Holi xd te escribo por medio de este enlace web para citarte el día Martes 14 a las 8pm en el Seúl, estaré por el columpio, te hubiera escrito un mensaje al Wsp pero me me enteré que estoy oculto y no recuerdas la contraseña xd, solo quiero conversar algo importante contigo, no temas :), si aceptas normal, sino también pero igual te estaré esperando ahí. Si el problema  es el dinero solo publica "Yape" en tu estado y te enviaré para tu pasaje. Si quieres venir, claro. Acepto tu desisión.</p>
+                <p>Holi xd te escribo por medio de este enlace web para citarte el día Martes 14 a las 8pm en el Seúl, estaré por el columpio, te hubiera escrito un mensaje al Wsp pero me me enteré tarde 😅</p>
                 <p style="margin-bottom: 0;"><strong>Por cierto, soy Deyan</strong>.</p>
             </div>
 
@@ -393,7 +393,7 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const chars = '01 10101010101010101010101010101010101010101010101010101010110101010101010101010101010101010101010101;
+        const chars = '01101010101010101010101010101010101010101010101010101010110101010101010101010101010101010101010101';
         const charArray = chars.split('');
 
         const drops = [];
@@ -437,7 +437,7 @@
 
         // Funciones de la aplicación
         function validatePassword() {
-            const passwordInput = document.getElementById('passwordInput').value;
+            const passwordInput = document.getElementById('passwordInput').value.trim();
             const passwordError = document.getElementById('passwordError');
             const correctPassword = 'Andres';
 
@@ -473,7 +473,7 @@
             // Desactivar botones
             document.querySelectorAll('.button-group button').forEach(btn => {
                 btn.disabled = true;
-                btn.opacity = 0.5;
+                btn.style.opacity = '0.5';
             });
 
             setTimeout(() => {
@@ -491,7 +491,7 @@
             // Desactivar botones
             document.querySelectorAll('.button-group button').forEach(btn => {
                 btn.disabled = true;
-                btn.opacity = 0.5;
+                btn.style.opacity = '0.5';
             });
 
             setTimeout(() => {
